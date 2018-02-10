@@ -1,3 +1,3 @@
 class Idea < ApplicationRecord
-  validates_presence_of :name, :user_id, :category_id
+  validates_presence_of :user_id
 end
