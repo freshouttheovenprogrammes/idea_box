@@ -7,7 +7,7 @@ describe "As a user" do
       visit root_path
 
       expect(page).to have_content('Join IdeaBox today.')
-      expect(page).to have_field('Get Started')
+      expect(page).to have_field('Email Address')
       expect(page).to have_content('Have an account?')
       expect(page).to have_link('Log In')
     end
