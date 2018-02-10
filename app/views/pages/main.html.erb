@@ -1,6 +1,6 @@
 <p>Join IdeaBox today.</p>
 
-<%= form_for(@user) do |f| %>
+<%= form_for @user do |f| %>
 
      <%= f.label :email, "Email Address" %>
      <%= f.email_field :email %>
@@ -8,9 +8,8 @@
      <%= f.label :password %>
      <%= f.password_field :password %>
 
-     <%= f.submit "Create my account", class: "btn btn-primary" %>
+     <%= f.submit "Get Started" %>
 <% end %>
 
-<%= button_to "Get Started", new_user_path, :method => :get %>
 <p>Have an account?</p>
 <%= link_to "Log In" %>
