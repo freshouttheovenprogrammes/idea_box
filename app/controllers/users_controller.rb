@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         redirect_to new_user_path
       else
         flash[:error] = "Please enter full credentials"
-        redirect_to root_path
+        render "/pages/main"
       end
   end
 

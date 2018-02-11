@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'pages#main'
 
   resources :users
-  
-  resources :login, only: [:show]
+
+  resources :login, only: [:new, :create, :destroy]
 end
