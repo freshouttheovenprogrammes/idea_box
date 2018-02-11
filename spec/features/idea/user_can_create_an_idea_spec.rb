@@ -7,7 +7,6 @@ describe "As a user" do
 
       visit user_path(user)
 
-      save_and_open_page
       click_on 'Create Idea'
       expect(current_path).to eq new_idea_path
 
