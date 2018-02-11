@@ -1,18 +1,41 @@
-<p>Join IdeaBox today.</p>
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="application.scss">
+    <link href='https://fonts.googleapis.com/css?family=Coda Caption:800' rel='stylesheet'>
+    <title>Idea Box</title>
+  </head>
 
-<%= form_for @user do |f| %>
+  <body>
+    <section class="root-left-half">
+      <nav class="root-left-half-nav">
+      <div class="root-left-half-nav-content">
+      </div>
+    </nav>
+    </section>
+    <section class="root-right-half">
+      <p>Join IdeaBox today.</p>
 
-     <%= f.label :email, "Email Address" %>
-     <%= f.email_field :email %>
+      <%= form_for @user do |f| %>
+      <%= f.label :email, "Email Address" %>
+      <%= f.email_field :email %>
 
-     <%= f.label :password %>
-     <%= f.password_field :password %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
 
-     <%= f.label :full_name, "Full Name" %>
-     <%= f.text_field :full_name %>
+      <%= f.label :full_name, "Full Name" %>
+      <%= f.text_field :full_name %>
 
-     <%= f.submit "Get Started" %>
-<% end %>
+      <%= f.submit "Get Started" %>
+      <% end %>
+
+    </section>
+  </body>
+</html>
+
+
+
 
 <p>Have an account?</p>
 <%= link_to "Log In"%>
