@@ -58,7 +58,7 @@ describe "As a user" do
       expect(page).to have_content "Please enter valid email"
     end
 
-    xit "I can't enter an email thats already been saved" do
+    it "I can't enter an email thats already been saved" do
       visit root_path
 
       fill_in 'Email Address', with: "example1@email.com"

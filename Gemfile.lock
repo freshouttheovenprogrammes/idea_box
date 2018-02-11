@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/codahale/bcrypt-ruby.git
+  revision: f2db689ba567d1a018f4dacb1ccf909adc93e887
+  specs:
+    bcrypt (3.1.11)
+
+GIT
   remote: https://github.com/thoughtbot/shoulda-matchers.git
   revision: cd96089a56b97cd11f7502826636895253eca27d
   specs:
@@ -48,7 +54,6 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
     byebug (10.0.0)
@@ -197,7 +202,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt (~> 3.1.7)
+  bcrypt!
   byebug
   capybara
   coffee-rails (~> 4.2)
