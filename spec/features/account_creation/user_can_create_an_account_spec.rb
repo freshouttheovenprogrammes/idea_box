@@ -47,7 +47,7 @@ describe "As a user" do
       expect(page).to have_content "Please enter full credentials"
     end
 
-    xit "without entering email I get an error message" do
+    xit "without entering proper email address I get an error message" do
       visit root_path
 
       fill_in 'Email Address', with: "bogusemail.notreal"
