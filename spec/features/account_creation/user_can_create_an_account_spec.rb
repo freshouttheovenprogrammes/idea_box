@@ -21,5 +21,13 @@ describe "As a user" do
 
       expect(current_path).to eq new_user_path
     end
+
+    xit "I click log in and go to a page to enter credentials" do
+      visit root_path
+
+      click_on 'Log In'
+
+      expect(current_path).to eq login_path
+    end
   end
 end
