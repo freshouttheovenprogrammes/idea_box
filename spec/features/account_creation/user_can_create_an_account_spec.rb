@@ -61,19 +61,19 @@ describe "As a user" do
     xit "I can't enter an email thats already been saved" do
       visit root_path
 
-      fill_in 'Email Address', with: "example@email.com"
+      fill_in 'Email Address', with: "example1@email.com"
       fill_in 'Password', with: "password"
       fill_in 'Full Name', with: "Joe Smith"
       click_on 'Get Started'
 
       visit root_path
 
-      fill_in 'Email Address', with: "example@email.com"
+      fill_in 'Email Address', with: "example1@email.com"
       fill_in 'Password', with: "password"
       fill_in 'Full Name', with: "Joe Smith"
       click_on 'Get Started'
 
-      expect(page).to have_content "This user already exists!"
+      expect(page).to have_content "Sorry there is a user already registered with that email, please try again"
     end
   end
 end
