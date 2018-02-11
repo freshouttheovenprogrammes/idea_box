@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_signup_params)
       if @user.save
-        redirect_to new_user_path(@user)
+        redirect_to new_user_path
       else
         flash[:error] = "Please enter full credentials"
         redirect_to root_path
@@ -17,6 +17,6 @@ class UsersController < ApplicationController
   private
 
     def user_signup_params
-      params.require(:user).permit(:email, :password)
+      params.require(:user).permit(:email, :password, :full_name)
     end
 end

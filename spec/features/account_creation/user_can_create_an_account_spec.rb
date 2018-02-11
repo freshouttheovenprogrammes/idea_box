@@ -8,6 +8,8 @@ describe "As a user" do
 
       expect(page).to have_content('Join IdeaBox today.')
       expect(page).to have_field('Email Address')
+      expect(page).to have_field('Password')
+      expect(page).to have_field('Full Name')
       expect(page).to have_content('Have an account?')
       expect(page).to have_link('Log In')
     end
@@ -17,17 +19,61 @@ describe "As a user" do
 
       fill_in 'Email Address', with: "example@email.com"
       fill_in 'Password', with: "password"
+      fill_in 'Full Name', with: "Joe Smith"
       click_on 'Get Started'
 
       expect(current_path).to eq new_user_path
     end
 
-    xit "I click log in and go to a page to enter credentials" do
+    it "without entering password I get an error message" do
       visit root_path
 
-      click_on 'Log In'
+      fill_in 'Email Address', with: "example@email.com"
+      fill_in 'Password', with: ""
+      fill_in 'Full Name', with: "Joe Smith"
+      click_on 'Get Started'
 
-      expect(current_path).to eq login_path
+      expect(page).to have_content "Please enter full credentials"
+    end
+
+    it "without entering email I get an error message" do
+      visit root_path
+
+      fill_in 'Email Address', with: ""
+      fill_in 'Password', with: "password"
+      fill_in 'Full Name', with: "Joe Smith"
+      click_on 'Get Started'
+
+      expect(page).to have_content "Please enter full credentials"
+    end
+
+    xit "without entering email I get an error message" do
+      visit root_path
+
+      fill_in 'Email Address', with: "bogusemail.notreal"
+      fill_in 'Password', with: "password"
+      fill_in 'Full Name', with: "Joe Smith"
+      click_on 'Get Started'
+
+      expect(page).to have_content "Please enter valid email"
+    end
+
+    xit "I can't enter an email thats already been saved" do
+      visit root_path
+
+      fill_in 'Email Address', with: "example@email.com"
+      fill_in 'Password', with: "password"
+      fill_in 'Full Name', with: "Joe Smith"
+      click_on 'Get Started'
+
+      visit root_path
+
+      fill_in 'Email Address', with: "example@email.com"
+      fill_in 'Password', with: "password"
+      fill_in 'Full Name', with: "Joe Smith"
+      click_on 'Get Started'
+
+      expect(page).to have_content "This user already exists!"
     end
   end
 end
