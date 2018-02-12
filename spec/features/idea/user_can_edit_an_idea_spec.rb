@@ -9,7 +9,6 @@ describe "As a user" do
       visit user_idea_path(user, idea)
 
       click_on 'Edit Idea'
-
       fill_in 'idea[name]', with: "wash dishes"
       click_on 'Update Idea'
 

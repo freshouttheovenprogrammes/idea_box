@@ -24,6 +24,22 @@ class IdeasController < ApplicationController
     @user = @idea.user
   end
 
+  def edit
+    @idea = Idea.find(params[:id])
+    @user = @idea.user
+  end
+
+  def update
+     @idea = Idea.find(params[:id])
+     @user = @idea.user
+     if @idea.update(idea_params)
+       flash[:notice] = "Success"
+       redirect_to user_idea_path(@user, @idea)
+     else
+       render :edit
+     end
+  end
+  
   private
 
   def idea_params
