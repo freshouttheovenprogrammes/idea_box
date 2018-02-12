@@ -6,8 +6,4 @@ class User < ApplicationRecord
   has_many :ideas
 
   has_secure_password
-
-  # def self.authenticate(email, password)
-  # end
-
 end

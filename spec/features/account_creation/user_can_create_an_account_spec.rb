@@ -47,17 +47,6 @@ describe "As a user" do
       expect(page).to have_content "Email can't be blank"
     end
 
-    xit "without entering proper email address I get an error message" do
-      visit root_path
-
-      fill_in 'Email Address', with: "bogusemail.notreal"
-      fill_in 'Password', with: "password"
-      fill_in 'Full Name', with: "Joe Smith"
-      click_on 'Get Started'
-
-      expect(page).to have_content "Please enter valid email"
-    end
-
     it "I can't enter an email thats already been saved" do
       visit root_path
 
