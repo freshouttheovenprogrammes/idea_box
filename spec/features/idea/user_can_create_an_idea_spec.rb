@@ -9,7 +9,7 @@ describe "As a user" do
 
       click_on 'Create Idea'
       expect(current_path).to eq new_idea_path
-      save_and_open_page
+
       fill_in 'idea[name]', with: "Ideabox"
       click_on 'Submit Idea'
 
