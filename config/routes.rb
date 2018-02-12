@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   resources :users do
-    resources :ideas, only: [:show, :index]
+    resources :ideas
   end
 
 

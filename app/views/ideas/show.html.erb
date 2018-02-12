@@ -1,0 +1,5 @@
+<% @user.ideas.each do |idea| %>
+<%= idea.name %><br>
+<%= link_to "Edit Idea", edit_user_idea_path(@user)%><br>
+<%= link_to "Delete Idea", edit_user_idea_path(@user)%>
+<% end %>

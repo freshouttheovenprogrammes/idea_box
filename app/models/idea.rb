@@ -1,4 +1,4 @@
 class Idea < ApplicationRecord
-  validates_presence_of :user_id, :name
+  validates_presence_of :name
   belongs_to :user
 end
