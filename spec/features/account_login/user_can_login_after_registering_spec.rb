@@ -10,7 +10,7 @@ describe "As a user" do
       click_link 'Log In'
 
       expect(current_path).to eq login_path
-
+      save_and_open_page
       fill_in 'Email', with: 'jon@gmail.com'
       fill_in 'Password', with: 'password'
 
