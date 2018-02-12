@@ -36,10 +36,18 @@ class IdeasController < ApplicationController
        flash[:notice] = "Success"
        redirect_to user_idea_path(@user, @idea)
      else
+       flash[:notice] = "Try again"
        render :edit
      end
   end
-  
+
+  def destroy
+    @idea = Idea.find(params[:id])
+    @user = @idea.user
+    @idea.destroy
+    redirect_to user_ideas_path(@user)
+  end
+
   private
 
   def idea_params
