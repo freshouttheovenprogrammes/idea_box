@@ -1,0 +1,29 @@
+  <section class="root-left-half">
+    <nav class="root-left-half-nav">
+      <div class="root-left-half-nav-content">
+      </div>
+    </nav>
+  </section>
+  <section class="root-right-half">
+    <p>Join IdeaBox today.</p>
+
+    <%= form_for @user do |f| %>
+    <%= f.label :email, "Email Address" %>
+    <%= f.email_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :full_name, "Full Name" %>
+    <%= f.text_field :full_name %>
+
+    <%= f.submit "Get Started", class: 'get-started-btn' %>
+    <% end %>
+
+  </section>
+
+
+
+
+  <p>Have an account?</p>
+  <%= link_to "Log In", login_path%>
