@@ -33,7 +33,7 @@ describe "As a user" do
       fill_in 'Full Name', with: "Joe Smith"
       click_on 'Get Started'
 
-      expect(page).to have_content "Please enter full credentials"
+      expect(page).to have_content "Password can't be blank"
     end
 
     it "without entering email I get an error message" do
@@ -44,7 +44,7 @@ describe "As a user" do
       fill_in 'Full Name', with: "Joe Smith"
       click_on 'Get Started'
 
-      expect(page).to have_content "Please enter full credentials"
+      expect(page).to have_content "Email can't be blank"
     end
 
     xit "without entering proper email address I get an error message" do
