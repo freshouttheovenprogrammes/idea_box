@@ -1,8 +1,8 @@
 <div class = 'new-idea-form'>
-      <%= form_for [@user,@idea] do |f| %>
-        <p><%= f.label :name %></p>
-        <p><%= f.text_field :name %></p>
+  <%= form_for [@user, @idea] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-        <p><%= f.submit "Submit Idea", user_idea_path(@user, @idea) %></p>
-      <% end %>
+    <%= f.submit "Submit Idea"%>
+  <% end %>
 </div>
