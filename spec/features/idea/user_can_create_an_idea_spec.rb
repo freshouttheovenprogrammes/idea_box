@@ -13,7 +13,7 @@ describe "As a user" do
       fill_in 'idea[name]', with: "Ideabox"
       select "#{category.name}", from: "idea[category_id]"
 
-      click_on 'Submit Idea'
+      click_on 'Create Idea'
 
       expect(current_path).to eq user_idea_path(user, user.ideas.last)
       expect(page).to have_content 'Ideabox'
