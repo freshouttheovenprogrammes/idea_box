@@ -2,8 +2,6 @@ require 'rails_helper'
 
 describe "As a user" do
   it "I can create a new category" do
-    # user = User.create!(email: "zac@zac.com", password: "password", full_name: "Zac Zac")
-
     visit new_category_path
 
     fill_in 'category[name]', with: "sports"
