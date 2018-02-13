@@ -6,11 +6,6 @@
     <%= select(:idea, :category_id, options_for_select(@categories.collect do |c|
                                                         [c.name, c.id] end)) %>
 
-    <div class="new-idea-form-image">
-      <%= f.label :image %>
-      <%= f.file_field :image %>
-    </div>
-
     <%= f.submit%>
   <% end %>
 </div>
