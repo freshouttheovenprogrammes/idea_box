@@ -1,5 +1,6 @@
 <% @user.ideas.each do |idea| %>
 <%= idea.name %><br>
+<%= image_tag @idea.image.url, class="idea-show-img" %>
 <%= link_to "Edit Idea", edit_user_idea_path(@user)%><br>
 <%= link_to "Delete Idea", user_idea_path(@user), method: :delete %>
 <% end %>

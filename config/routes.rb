@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   resources :users do
     resources :ideas
   end
-  
+
   resources :ideas
   resources :categories
+  resources :image_ideas
+
 
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
