@@ -3,6 +3,9 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
 
-    <%= f.submit "Submit Idea"%>
+    <%= select(:idea, :category_id, options_for_select(@categories.collect do |c|
+                                                        [c.name, c.id] end)) %>
+
+    <%= f.submit%>
   <% end %>
 </div>
