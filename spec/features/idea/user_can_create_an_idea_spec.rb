@@ -6,7 +6,7 @@ describe "As a user" do
       user = User.create!(email: "email@email.com", password: "password", full_name: "Suzy Sue")
       category = Category.create!(name: "chores")
       visit user_path(user)
-
+      
       click_on 'Create Idea'
       expect(current_path).to eq new_user_idea_path(user)
 
