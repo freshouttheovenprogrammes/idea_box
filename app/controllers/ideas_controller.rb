@@ -3,6 +3,7 @@ class IdeasController < ApplicationController
   def new
     @idea = Idea.new
     @user = User.find(params[:user_id])
+    @categories = Category.all
   end
 
   def create
@@ -27,6 +28,7 @@ class IdeasController < ApplicationController
   def edit
     @idea = Idea.find(params[:id])
     @user = @idea.user
+    @categories = Category.all
   end
 
   def update
@@ -51,6 +53,6 @@ class IdeasController < ApplicationController
   private
 
   def idea_params
-    params.require(:idea).permit(:user_id, :name)
+    params.require(:idea).permit(:user_id, :name, :category_id)
   end
 end
