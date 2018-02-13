@@ -11,6 +11,7 @@ describe "As a user" do
 
       click_on 'Delete Idea'
 
+      expect(current_path).to eq(user_ideas_path(user))
       expect(page).to_not have_content('take out trash')
     end
   end
