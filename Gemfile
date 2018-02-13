@@ -40,6 +40,7 @@ group :development, :test do
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
   gem 'rspec-rails'
   gem 'launchy'
+  gem 'database_cleaner'
 end
 
 group :development do
