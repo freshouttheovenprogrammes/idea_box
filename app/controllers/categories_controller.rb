@@ -12,6 +12,21 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
   end
 
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    if @category.update(category_params)
+      flash[:notice] = "Success"
+      redirect_to category_path(@category)
+    else
+      flash[:notice] = "Try again"
+      render :edit
+    end
+  end
+
   def create
     @category = Category.new(category_params)
       if @category.save

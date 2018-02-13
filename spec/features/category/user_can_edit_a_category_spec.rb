@@ -12,6 +12,7 @@ describe "As a user" do
     fill_in 'category[name]', with: "house music"
     click_on 'Update Category'
 
+    expect(current_path).to eq category_path(category)    
     expect(page).to have_content 'house music'
   end
 end
