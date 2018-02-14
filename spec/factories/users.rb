@@ -4,4 +4,7 @@ FactoryBot.define do
     password "password"
     full_name "Zac Psquizz"
   end
+  factory :category do
+    name "chores"
+  end
 end
