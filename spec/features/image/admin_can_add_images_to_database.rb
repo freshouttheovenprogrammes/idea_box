@@ -1,7 +1,18 @@
 require 'rails_helper'
 
+describe "As a regular user" do
+  it "I can't add new images" do
+
+    visit new_image_path
+
+    expect(page).to have_content('404')
+  end
+end
+
+
 describe "As an admin" do
-  it "I can go to the new images page and add a new image" do
+  xit "I can go to the new images page and add a new image" do
+
     visit new_image_path
 
     expect(page).to have_button('Create Image')
