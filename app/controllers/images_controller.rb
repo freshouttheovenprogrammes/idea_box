@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+  before_action :logged_in?, :current_admin, only: [:new]
 
   def new
     @image = Image.new
