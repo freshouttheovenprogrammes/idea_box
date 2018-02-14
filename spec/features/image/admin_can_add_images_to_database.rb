@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "As a user" do
-  it "I can go to the images page and add a new image" do
+describe "As an admin" do
+  it "I can go to the new images page and add a new image" do
     visit new_image_path
 
     expect(page).to have_button('Create Image')

@@ -6,8 +6,8 @@ FactoryBot.define do
     role      0
   end
     factory :admin, class: User do
-    first_name "Admin"
-    last_name  "User"
+    email "boss@boss.com"
+    password "password"
     role        1
     id          2
   end
