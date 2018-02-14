@@ -9,11 +9,11 @@ class IdeasController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @idea = @user.ideas.new(idea_params)
-      if @idea.save
-        redirect_to user_idea_path(@user, @idea)
-      else
-        render :new
-      end
+    if @idea.save
+      redirect_to user_idea_path(@user, @idea)
+    else
+      render :new
+    end
   end
 
   def index
@@ -21,8 +21,13 @@ class IdeasController < ApplicationController
   end
 
   def show
-    @idea = Idea.find(params[:id])
-    @user = @idea.user
+    # byebug
+    if current_user.id == params[:user_id].to_i
+      @idea = Idea.find(params[:id])
+      @user = @idea.user
+    else
+      render file: "/public/404"
+    end
   end
 
   def edit
@@ -52,7 +57,7 @@ class IdeasController < ApplicationController
 
   private
 
-    def idea_params
-      params.require(:idea).permit(:user_id, :name, :category_id)
-    end
+  def idea_params
+    params.require(:idea).permit(:user_id, :name, :category_id)
+  end
 end
