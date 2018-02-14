@@ -7,11 +7,11 @@ describe "As a user" do
 
       visit root_path
 
-      click_link 'Log In'
+      click_on 'Log In'
 
       expect(current_path).to eq login_path
 
-      fill_in 'Email', with: 'zac@zac.com'
+      fill_in 'Email Address', with: 'zac@zac.com'
       fill_in 'Password', with: 'password'
 
       click_on 'Log In'
@@ -25,11 +25,11 @@ describe "As a user" do
       user = create(:user)
       visit root_path
 
-      click_link 'Log In'
+      click_on 'Log In'
 
       expect(current_path).to eq login_path
 
-      fill_in 'Email', with: 'zac@zac.com'
+      fill_in 'Email Address', with: 'zac@zac.com'
       fill_in 'Password', with: 'wrongpassword'
 
       click_on 'Log In'
