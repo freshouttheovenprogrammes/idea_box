@@ -14,7 +14,7 @@ describe "As a user" do
 
     expect(current_path).to eq image_path(image.id)
     expect(page).to have_content('Test')
-    save_and_open_page
+
     expect(page).to have_css("img[src*='/uploads/image/image/1/thumb_test.jpg']")
   end
 end

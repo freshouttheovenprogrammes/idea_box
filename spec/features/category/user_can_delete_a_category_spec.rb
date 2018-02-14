@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "As an admin" do
   it "I can delete a category" do
-    category = Category.create!(name: "chores")
+    category = create(:category)
 
     visit category_path(category)
 

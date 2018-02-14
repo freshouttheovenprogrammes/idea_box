@@ -1,13 +1,24 @@
 require 'rails_helper'
 
 describe "As a user" do
+  before(:each) do
+    @user = create(:user)
+
+    visit root_path
+
+    click_on 'Log In'
+
+    fill_in 'Email', with: "zac@zac.com"
+    fill_in 'Password', with: "password"
+
+    click_on 'Log In'
+  end
   context "when I'm on the idea show page" do
     it "I can edit the idea" do
-      user = User.create!(email: "zac@zac.com", password: "password", full_name: "Zac Zac")
-      category = Category.create!(name: "chores")
-      idea = Idea.create!(name: "take out trash", user_id: user.id, category_id: category.id)
+      category = create(:category)
+      idea = Idea.create!(name: "take out trash", user_id: @user.id, category_id: category.id)
 
-      visit user_idea_path(user, idea)
+      visit user_idea_path(@user, idea)
 
       click_on 'Edit Idea'
       fill_in 'idea[name]', with: "wash dishes"
