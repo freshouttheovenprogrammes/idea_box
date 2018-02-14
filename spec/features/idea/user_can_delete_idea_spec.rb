@@ -11,7 +11,7 @@ describe "As a user" do
 
       click_on 'Log In'
 
-      fill_in 'Email', with: 'zac@zac.com'
+      fill_in 'Email Address', with: 'zac@zac.com'
       fill_in 'Password', with: 'password'
 
       click_on 'Log In'
@@ -35,7 +35,7 @@ describe "As a user" do
 
       click_on "Log In"
 
-      fill_in "Email", with: "zac2@zac.com"
+      fill_in "Email Address", with: "zac2@zac.com"
       fill_in "Password", with: "test"
 
       visit user_idea_path(user1, idea)

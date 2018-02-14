@@ -9,7 +9,7 @@ describe "As a user" do
 
     click_on 'Log In'
 
-    fill_in 'Email', with: 'jon@gmail.com'
+    fill_in 'Email Address', with: 'jon@gmail.com'
     fill_in 'Password', with: 'password'
 
     click_on 'Log In'
@@ -27,6 +27,14 @@ describe "As a user" do
 
       expect(current_path).to eq user_idea_path(@user, @user.ideas.last)
       expect(page).to have_content 'Ideabox'
+    end
+
+    it "I can link back to my ideas page" do
+      click_on 'Create Idea'
+
+      click_on "My Ideas"
+
+      expect(current_path).to eq user_ideas_path(@user)
     end
   end
 end

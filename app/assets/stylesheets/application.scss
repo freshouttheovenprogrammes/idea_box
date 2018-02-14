@@ -14,11 +14,7 @@
  *= require_self
  */
 
-$beige: #EAD2AC;
-$blu-gray: #9CAFB7;
-$blue: #4281A4;
-$coral: #D992A0;
-$light-purp: #D8B4E2;
+@import 'skeleton';
 
 html, body {
   height: 100%;
@@ -59,29 +55,54 @@ body {
 }
 
 .join-idea {
-  font-size: 35px;
+  font-size: 18px;
   display: flex;
   justify-content: center;
+  padding-top: 60px;
 }
 
 .root-register {
   display: flex;
   padding-left: 165px;
-}
-
-.root-register {
-  border-radius: 5px;
   font: bold 11px Arial;
-  text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
+  display: table-caption;
 }
 
 .root-register form {
+  padding: 10px;
+  display: grid;
+}
 
+.root-register label {
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.root-login-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.root-login-form input {
+  padding: 10px;
+  font-size: 15px;
+  display: inline-flex;
+  margin: 8px;
+}
+
+.login-btn, .get-started-btn {
+  background-color: white;
+  color: $blue;
+  border-radius: 15px;
+  border-color: $blue;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+
+.login-btn:hover, .get-started-btn:hover {
+  background-color: $light-purp;
 }

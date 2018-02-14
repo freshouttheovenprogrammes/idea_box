@@ -6,8 +6,16 @@
   </section>
 
   <section class="root-right-half">
-    <p class="join-idea">Join IdeaBox today.</p>
+    <p>Already have an account with us?</p>
+      <%= form_tag login_path do %>
+      <%= submit_tag "Log In", class: 'login-btn' %>
+      <% end %>
+    </div>
+
+    <img src="app/assets/images/idea-bulb.jpg" alt="">
     <div class="root-register">
+      <p class="join-idea">Join IdeaBox<br><br>
+      Register Here</p>
       <div class="root-register-form">
         <%= form_for @user do |f| %>
         <%= f.label :email, "Email Address" %>
@@ -19,11 +27,9 @@
         <%= f.label :full_name, "Full Name" %>
         <%= f.text_field :full_name %>
 
-        <%= f.submit "Get Started", class: 'get-started-btn' %>
+        <%= f.submit "Get Started", class: 'button' %>
         <% end %>
       </div>
-    <p>Have an account?</p>
-    <%= link_to "Log In", login_path%>
-  </div>
+    </div>
 
   </section>
