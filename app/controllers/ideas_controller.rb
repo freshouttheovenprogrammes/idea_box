@@ -1,4 +1,7 @@
 class IdeasController < ApplicationController
+  before_action :logged_in?
+  before_action :idea_current_user, except: [:create]
+  before_action :idea_current_user, only: [:show, :edit, :update, :destroy]
 
   def new
     @idea = Idea.new
@@ -21,13 +24,8 @@ class IdeasController < ApplicationController
   end
 
   def show
-    # byebug
-    if current_user.id == params[:user_id].to_i
-      @idea = Idea.find(params[:id])
-      @user = @idea.user
-    else
-      render file: "/public/404"
-    end
+    @idea = Idea.find(params[:id])
+    @user = @idea.user
   end
 
   def edit
@@ -59,5 +57,9 @@ class IdeasController < ApplicationController
 
   def idea_params
     params.require(:idea).permit(:user_id, :name, :category_id)
+  end
+
+  def idea_current_user
+    @user = current_user
   end
 end

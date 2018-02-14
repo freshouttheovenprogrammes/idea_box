@@ -2,10 +2,19 @@ require 'rails_helper'
 
 describe "As a user" do
   context "when I'm on the idea show page" do
-    xit "I can delete my idea" do
+    it "I can delete my idea" do
       user = create(:user)
       category = create(:category)
-      idea = create(:idea)
+      idea = Idea.create!(name: "make things", user_id: user.id, category_id: category.id)
+
+      visit root_path
+
+      click_on 'Log In'
+
+      fill_in 'Email', with: 'zac@zac.com'
+      fill_in 'Password', with: 'password'
+
+      click_on 'Log In'
 
       visit user_idea_path(user, idea)
 
@@ -30,8 +39,7 @@ describe "As a user" do
       fill_in "Password", with: "test"
 
       visit user_idea_path(user1, idea)
-
-      expect(current_path).to eq root_path
+      expect(page).to have_content "404"
     end
   end
 end
