@@ -8,8 +8,8 @@ describe "As a user" do
       visit root_path
       click_on 'Log In'
 
-      fill_in 'email', with: "zac@zac.com"
-      fill_in 'password', with: "password"
+      fill_in 'Email Address', with: "zac@zac.com"
+      fill_in 'Password', with: "password"
       click_on 'Log In'
 
       expect(page).to have_content('Welcome back Zac Psquizz!')

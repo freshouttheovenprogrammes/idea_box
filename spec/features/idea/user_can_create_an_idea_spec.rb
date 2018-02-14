@@ -9,7 +9,7 @@ describe "As a user" do
 
     click_on 'Log In'
 
-    fill_in 'Email', with: 'jon@gmail.com'
+    fill_in 'Email Address', with: 'jon@gmail.com'
     fill_in 'Password', with: 'password'
 
     click_on 'Log In'
