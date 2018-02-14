@@ -6,6 +6,17 @@
   </section>
 
   <section class="root-right-half">
+    <div class="root-login-form">
+      <%= form_tag login_path do %>
+
+      <%= text_field_tag :email, nil,  placeholder: 'Email Address' %>
+
+      <%= password_field_tag :password, nil, placeholder: 'Password' %>
+
+      <%= submit_tag "Log In", class: 'login-btn' %>
+      <% end %>
+    </div>
+
     <p class="join-idea">Join IdeaBox today.</p>
     <div class="root-register">
       <div class="root-register-form">
@@ -22,8 +33,6 @@
         <%= f.submit "Get Started", class: 'get-started-btn' %>
         <% end %>
       </div>
-    <p>Have an account?</p>
-    <%= link_to "Log In", login_path%>
-  </div>
+    </div>
 
   </section>
