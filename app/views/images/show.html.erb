@@ -1,0 +1,11 @@
+<p>
+  <strong>Image Name:</strong>
+  <%= @image.title %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @image.image.thumb.url %>
+</p>
+
+<%= link_to 'Back', images_path %>
