@@ -2,7 +2,8 @@ require 'rails_helper'
 
 describe "As a user" do
   context "after registering with IdeaBox" do
-    it "I can log back in and arrive at my profile" do
+    context "I can log back in and arrive at my profile" do
+      it "and also link back to the home page" do
       user = create(:user)
 
       visit root_path
@@ -19,6 +20,12 @@ describe "As a user" do
       expect(current_path).to eq user_path(user)
 
       expect(page).to have_content("Welcome back #{user.full_name}!")
+      expect(page).to have_content("Home")
+
+      click_on "Home"
+
+      expect(current_path).to eq root_path
+      end
     end
 
     it "if I enter the wrong password I am directed back to the login page" do

@@ -1,0 +1,12 @@
+@import 'application';
+
+.button {
+  background-color: white;
+  color: $blue;
+  border-radius: 15px;
+  border-color: $blue;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
