@@ -4,5 +4,6 @@ FactoryBot.define do
     password "password"
     full_name "Zac Psquizz"
     role 0
+    id 1
   end
 end
