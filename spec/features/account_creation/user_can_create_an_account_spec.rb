@@ -6,12 +6,12 @@ describe "As a user" do
 
       visit root_path
 
-      expect(page).to have_content('Join IdeaBox today.')
+      expect(page).to have_content('Join IdeaBox')
       expect(page).to have_field('Email Address')
       expect(page).to have_field('Password')
       expect(page).to have_field('Full Name')
-      expect(page).to have_content('Have an account?')
-      expect(page).to have_link('Log In')
+      expect(page).to have_content('Already have an account with us?')
+      expect(page).to have_selector(:link_or_button, 'Log In')
     end
 
     it "I enter my credentials and arrive at new user page" do
