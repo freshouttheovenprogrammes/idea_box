@@ -11,9 +11,10 @@ describe "As a user" do
     click_on('Create Image')
 
     image = Image.last
-    save_and_open_page
+
     expect(current_path).to eq image_path(image.id)
     expect(page).to have_content('Test')
-    expect(page).to have_content('app/assets/images/test.jpg')
+    save_and_open_page
+    expect(page).to have_css("img[src*='/uploads/image/image/1/thumb_test.jpg']")
   end
 end
