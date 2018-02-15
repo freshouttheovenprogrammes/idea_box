@@ -54,7 +54,6 @@ describe "As an admin" do
   it "I can create a category" do
     admin = create(:admin)
     category = create(:category)
-
     visit login_path
 
     fill_in 'Email Address', with: admin.email
@@ -63,8 +62,9 @@ describe "As an admin" do
 
     visit new_admin_category_path
 
+    fill_in 'Name', with: 'new cat'
     click_on 'Create Category'
 
-    save_and_open_page
+    expect(page).to have_content('new cat')
   end
 end
