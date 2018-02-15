@@ -48,4 +48,9 @@ class CategoriesController < ApplicationController
  def category_params
     params.require(:category).permit(:name)
  end
+
+ def correct_user?
+  @user == current_admin?
+ end
+
 end
