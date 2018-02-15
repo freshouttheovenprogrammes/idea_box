@@ -12,7 +12,7 @@ class IdeasController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @idea = @user.ideas.new(idea_params)
-    @images = Image.all
+    set_image(@image)
     if @idea.save
       redirect_to user_idea_path(@user, @idea)
     else
@@ -62,5 +62,13 @@ class IdeasController < ApplicationController
 
   def idea_current_user
     @user = current_user
+  end
+
+  def images_to_set
+    
+  end
+
+  def set_image(image)
+    @idea.image << image
   end
 end
