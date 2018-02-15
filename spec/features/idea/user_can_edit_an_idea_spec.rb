@@ -23,8 +23,8 @@ describe "As a user" do
       click_on 'Edit Idea'
       fill_in 'idea[name]', with: "wash dishes"
       select "#{category.name}", from: "idea[category_id]"
-
-      click_on 'Update Idea'
+      
+      click_on 'Edit Idea'
 
       expect(page).to have_content "Success"
       expect(page).to have_content 'wash dishes'
