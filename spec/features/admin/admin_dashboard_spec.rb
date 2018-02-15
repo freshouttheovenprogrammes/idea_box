@@ -19,7 +19,6 @@ describe "As an admin" do
     end
 
     it "there are links to admin only paths" do
-      save_and_open_page
       expect(page).to have_content("Add Categories")
       expect(page).to have_content("Add Images")
     end

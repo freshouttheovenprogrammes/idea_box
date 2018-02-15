@@ -51,7 +51,7 @@ describe "As an admin" do
     expect(page).to_not have_content('chores')
   end
 
-  xit "I can create a category" do
+  it "I can create a category" do
     admin = create(:admin)
     category = create(:category)
 
@@ -61,11 +61,10 @@ describe "As an admin" do
     fill_in 'Password', with: admin.password
     click_on 'Log In'
 
-    visit category_path(category)
+    visit new_admin_category_path
 
-    click_on 'Delete Category'
+    click_on 'Create Category'
 
-    expect(current_path).to eq categories_path
-    expect(page).to_not have_content('chores')
+    save_and_open_page
   end
 end
