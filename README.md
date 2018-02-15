@@ -1,24 +1,14 @@
 # README
+* IdeaBox runs off of Rails 5.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Run bundle install for all gems required to run this software.
 
-Things you may want to cover:
+* Run rake:db:seed to create the admin, then have fun!
 
-* Ruby version
+* Type rspec in the command line to run tests
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* A simple rails app that allows users to track ideas. This was an exercise in user authorization and authentication.
 
 * Deployment instructions
 
-* ...
+* The admin information is as follows: email: boss@gmail.com, password: bossperson
