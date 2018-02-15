@@ -1,6 +1,6 @@
 class Admin::CategoriesController < Admin::BaseController
   before_action :current_admin?
-  # ApplicationController
+
   def index
     @category = Category.all
   end

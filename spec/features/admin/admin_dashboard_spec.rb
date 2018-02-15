@@ -32,7 +32,7 @@ describe "As an admin" do
     it "the add images link takes me to the right path" do
       click_on "Add Images"
 
-      expect(current_path).to eq new_image_path
+      expect(current_path).to eq new_admin_image_path
     end
   end
 end
