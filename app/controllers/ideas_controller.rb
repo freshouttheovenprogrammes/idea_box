@@ -1,6 +1,5 @@
 class IdeasController < ApplicationController
   before_action :logged_in?
-  before_action :idea_current_user, except: [:create]
   before_action :idea_current_user, only: [:show, :edit, :update, :destroy]
 
   def new

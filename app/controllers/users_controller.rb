@@ -7,6 +7,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     redirect_to root_path unless @user == current_user
+    if @user.admin?
+      redirect_to admin_user_path(@user)
+    end
   end
 
   def create

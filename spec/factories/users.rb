@@ -8,6 +8,7 @@ FactoryBot.define do
     factory :admin, class: User do
     email "boss@boss.com"
     password "password"
+    full_name "The Boss"
     role        1
     id          2
   end
