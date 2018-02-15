@@ -6,11 +6,13 @@ class IdeasController < ApplicationController
     @idea = Idea.new
     @user = User.find(params[:user_id])
     @categories = Category.all
+    @images = Image.all
   end
 
   def create
     @user = User.find(params[:user_id])
     @idea = @user.ideas.new(idea_params)
+    @images = Image.all
     if @idea.save
       redirect_to user_idea_path(@user, @idea)
     else

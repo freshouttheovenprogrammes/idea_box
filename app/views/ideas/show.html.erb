@@ -1,6 +1,9 @@
 <%= link_to "Home", root_path %>
 <% @user.ideas.each do |idea| %>
+
 <%= idea.name %><br>
+
+<%= image_tag idea.images %>
 <%= link_to "Edit Idea", edit_user_idea_path(@user)%><br>
 <%= link_to "Delete Idea", user_idea_path(@user), method: :delete %>
 <% end %>

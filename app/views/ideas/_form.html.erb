@@ -9,6 +9,19 @@
     <%= select(:idea, :category_id, options_for_select(@categories.collect do |c|
                                                         [c.name, c.id] end)) %>
 
+    <% @images.each do |image| %>
+
+    <div class="image_<%= image.id %>">
+
+      <%= check_box_tag image.title %>
+      <%= image_tag image.image.to_s%>
+    </div>
+    <% end %>
+
     <%= f.submit%>
   <% end %>
+</div>
+
+<div class="image-selection">
+
 </div>
