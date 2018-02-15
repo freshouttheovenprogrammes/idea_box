@@ -11,16 +11,21 @@
 
 <section class="root-left-half">
   <nav class="root-left-half-nav">
+    <%= link_to "All Images", images_path %><br>
+    <%= link_to "All Categories", categories_path %>
+    <h1>Check us out! Sign up on the right to begin or browse our page</h1>
     <div class="root-left-half-nav-content">
     </div>
   </nav>
 </section>
 
 <section class="root-right-half">
-  <p>Already have an account with us?</p>
+  <div class="root-login-form">
+    <p>Already have an account with us?</p>
     <%= form_tag login_path do %>
     <%= submit_tag "Log In", class: 'login-btn' %>
     <% end %>
+  </div>
   </div>
 
   <img src="app/assets/images/idea-bulb.jpg" alt="">

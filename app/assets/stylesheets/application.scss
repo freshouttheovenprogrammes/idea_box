@@ -27,6 +27,38 @@ body {
   margin: 0;
 }
 
+.navbar-container ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  background-color: $coral;
+  font-size: 23px;
+  height: 75px;
+  padding: 0;
+  font-family: $font-default;
+}
+
+.navbar-container li {
+  display: flex;
+  align-self: center;
+}
+
+.root-left-half-nav a {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 50px;
+  text-decoration: none;
+  color: antiquewhite;
+  font-family: $font-default;
+}
+
+.root-left-half-nav h1 {
+  padding: 20px;
+  padding: 20px;
+  font-size: 45px;
+  font-family: $font-default;
+}
+
 .root-left-half-img {
   width: 50%;
   height: 100%
@@ -83,6 +115,8 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 25px;
+  font-size: 18px;
+  padding-right: 15px;
 }
 
 .root-login-form input {
@@ -106,4 +140,48 @@ body {
 
 .login-btn:hover, .get-started-btn:hover {
   background-color: $light-purp;
+}
+
+.container {
+  position: absolute;
+  bottom: 500px;
+  right: 264px;
+}
+
+.welcome_back {
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
+}
+
+.create-idea-link {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.create-idea-link {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.create-idea-link a {
+  text-decoration: none;
+}
+
+.idea-navbar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.idea-navbar-container a {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+}
+
+.image_container image {
+  height: 200px;
+  width: 150px;
 }

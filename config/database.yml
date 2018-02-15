@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: idea_box_production
   username: idea_box
   password: <%= ENV['IDEA_BOX_DATABASE_PASSWORD'] %>
