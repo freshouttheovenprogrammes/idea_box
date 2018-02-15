@@ -26,21 +26,13 @@ describe "As an admin" do
     it "the add categories link takes me to the right path" do
       click_on "Add Categories"
 
-      expect(current_path).to eq new_category_path
+      expect(current_path).to eq new_admin_category_path
     end
 
     it "the add images link takes me to the right path" do
       click_on "Add Images"
 
-      expect(current_path).to eq new_image_path
-    end
-  end
-
-  context "when I visit the categories page" do
-    it "I can see all of the categories" do
-    visit admin_categories_path
-
-    expect(page).to have_content("Admin Categories Path")
+      expect(current_path).to eq new_admin_image_path
     end
   end
 end

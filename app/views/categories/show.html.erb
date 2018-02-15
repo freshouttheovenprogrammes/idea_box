@@ -1,7 +1,9 @@
 <div class="nav_bar">
   <%= link_to "Home", root_path %>
+  <% if current_admin? %>
   <%= link_to "Edit Category", edit_category_path(@category) %>
   <%= link_to "Delete Category", category_path(@category), method: :delete %>
+  <% end %>
 </div>
 <div class="object-show">
   <%= @category.name %>

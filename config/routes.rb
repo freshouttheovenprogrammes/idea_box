@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :ideas
+    resources :categories, only: [:index, :show]
   end
 
   resources :ideas
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
-    resources :categories, only: [:index]
+    resources :categories
     resources :images, only: [:new]
     resources :users, only: [:show]
   end
