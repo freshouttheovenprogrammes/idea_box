@@ -11,3 +11,16 @@ p {
     family: $font-default;
   }
 }
+
+.navbar-container {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: $coral;
+    font-size: 23px;
+    height: 75px;
+    padding: 0;
+    font-family: $font-default;
+  }
+}
