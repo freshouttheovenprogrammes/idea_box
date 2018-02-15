@@ -24,13 +24,10 @@ describe "As a user" do
 
       select "#{@category.name}", from: "idea[category_id]"
       within(:css, '.image_container') do
-        # page.check('.image_1')
-        # find('.image_1').set(true)
-        # within_fieldset('.image_1').check
         check('image_1')
       end
       click_on 'Create Idea'
-      # byebug
+
       expect(current_path).to eq user_idea_path(@user, Idea.last)
       expect(page).to have_content('test')
       expect(page).to have_content("#{@category.name}")

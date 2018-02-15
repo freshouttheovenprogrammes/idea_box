@@ -4,6 +4,9 @@ describe "As a user" do
   before(:each) do
     @user = User.create!(email: "jon@gmail.com", password: "password", full_name: "Jon Jon", username: "jj101")
     @category = Category.create!(name: "chores")
+    @image1 = Image.create!(title: "img1", image: "/app/assets/images/idea-bulb.jpg")
+    @image2 = Image.create!(title: "img2", image: "/app/assets/images/idea-bulb.jpg")
+    @image3 = Image.create!(title: "img3", image: "/app/assets/images/idea-bulb.jpg")
 
     visit root_path
 
@@ -22,7 +25,9 @@ describe "As a user" do
       fill_in 'idea[name]', with: "Ideabox"
 
       select "#{@category.name}", from: "idea[category_id]"
-
+      within(:css, '.image_container') do
+        check('image_1')
+      end
       click_on 'Create Idea'
 
       expect(current_path).to eq user_idea_path(@user, @user.ideas.last)
