@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IdeaBox</title>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8" name="viewport" content="width=device-width, intial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Coda Caption:800' rel='stylesheet'>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<section class="root-left-half">
+  <nav class="root-left-half-nav">
+    <div class="root-left-half-nav-content">
+    </div>
+  </nav>
+</section>
+
+<section class="root-right-half">
+  <p>Already have an account with us?</p>
+    <%= form_tag login_path do %>
+    <%= submit_tag "Log In", class: 'login-btn' %>
+    <% end %>
+  </div>
+
+  <img src="app/assets/images/idea-bulb.jpg" alt="">
+  <div class="root-register">
+    <p class="join-idea">Join IdeaBox<br><br>
+    Register Here</p>
+    <div class="root-register-form">
+      <%= form_for @user do |f| %>
+      <%= f.label :email, "Email Address" %>
+      <%= f.email_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :full_name, "Full Name" %>
+      <%= f.text_field :full_name %>
+
+      <%= f.submit "Get Started", class: 'button' %>
+      <% end %>
+    </div>
+  </div>
+</section>
+</html>
