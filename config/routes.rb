@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :ideas
+    resources :categories, only: [:index, :show]
   end
 
   resources :ideas
