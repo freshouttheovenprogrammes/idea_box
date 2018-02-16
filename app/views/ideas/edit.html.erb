@@ -14,7 +14,7 @@
   <div class="image_container">
     <% @images.each do |image| %>
       <%= check_box_tag "images[]", image.id, checked = false, id: "image_#{image.id}" %>
-      <%= image_tag image.image%>
+      <%= image_tag image.image, size:"150x150" %>
 
      <% end %>
 

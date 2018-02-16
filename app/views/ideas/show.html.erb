@@ -1,11 +1,20 @@
-<%= link_to "Home", root_path %>
-<% @user.ideas.each do |idea| %>
 
-<%= idea.name %><br>
-<%= idea.category.name %><br>
-<% idea.images.each do |image| %>
-<%= image_tag image.image %>
-<% end %>
-<%= link_to "Edit Idea", edit_user_idea_path(@user)%><br>
-<%= link_to "Delete Idea", user_idea_path(@user), method: :delete %>
-<% end %>
+
+<div class="user-ideas-container">
+
+  <% @user.ideas.each do |idea| %>
+
+  <%= idea.name %><br>
+  <%= idea.category.name %><br>
+  <% idea.images.each do |image| %>
+  <%= image_tag image.image, size:"150x150" %>
+  <% end %>
+  <%= link_to "Edit Idea", edit_user_idea_path(@user)%><br>
+  <%= link_to "Delete Idea", user_idea_path(@user), method: :delete %>
+  <% end %>
+
+</div>
+
+<div class="create-idea-link">
+  <%= link_to "Create Another Idea?", new_user_idea_path(@user) %>
+</div>

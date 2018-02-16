@@ -20,7 +20,7 @@ class ImagesController < ApplicationController
   end
 
   def index
-    @image = Image.all
+    @images = Image.all
   end
 
   private
