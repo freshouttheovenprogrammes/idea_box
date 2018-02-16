@@ -7,7 +7,7 @@
   <%= idea.name %><br>
   <%= idea.category.name %><br>
   <% idea.images.each do |image| %>
-  <%= image_tag image.image %>
+  <%= image_tag image.image, size:"150x150" %>
   <% end %>
   <%= link_to "Edit Idea", edit_user_idea_path(@user)%><br>
   <%= link_to "Delete Idea", user_idea_path(@user), method: :delete %>
