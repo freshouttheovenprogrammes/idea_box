@@ -39,6 +39,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  margin: 0;
 }
 
 .images-container {
@@ -142,6 +143,12 @@ body {
   -o-transition: all .2s ease-in;
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
+}
+
+.create-idea-link {
+  position: relative;
+  bottom: -100px;
+  right: -50px;
 }
 
 

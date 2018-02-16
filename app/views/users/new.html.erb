@@ -1,4 +1,5 @@
-<%= link_to "Home", root_path %>
 <p>Welcome, <%= @user.full_name %> to IdeaBox!</p>
 <p>Here we will guide you through the process of creating an idea</p>
-<%= link_to "Create Idea", new_idea_path %>
+<div class="create-idea-button">
+  <%= link_to "Create Idea", new_idea_path %>
+</div>
