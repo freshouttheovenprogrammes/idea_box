@@ -11,12 +11,12 @@ Category.destroy_all
 
 User.create!(email: "boss@gmail.com", password: "bossperson", full_name: "CEO", role: 1)
 
-Image.create!(title:"Dawg", image: 'IMG_2433.jpg' )
-Image.create!(title:"Rambo", image: 'IMG_2445.jpg' )
-Image.create!(title:"Peaceful", image: 'IMG_2711.jpg' )
-Image.create!(title:"Meow", image: 'IMG_2974.jpg' )
-Image.create!(title:"One Cool Dude", image: 'IMG_3282.jpg' )
-Image.create!(title:"Bork", image: 'IMG_3315.jpg' )
+Image.create!(title:"Dawg", image: 'https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Natural-Dog-Law-2-To-dogs%2C-energy-is-everything.jpg?itok=Z-ujUOUr' )
+Image.create!(title:"Rambo", image: 'http://www.dogbreedslist.info/uploads/allimg/dog-pictures/German-Shepherd-Dog-1.jpg' )
+Image.create!(title:"Peaceful", image: 'http://r.ddmcdn.com/w_830/s_f/o_1/cx_20/cy_1463/cw_2528/ch_1422/APL/uploads/2014/11/puppy-cam-veer-2893191.jpg' )
+Image.create!(title:"Meow", image: 'http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Siberian-Husky-1.jpg' )
+Image.create!(title:"One Cool Dude", image: 'https://www.petinsurance.com/images/VSSimages/consumer/v5/banner_dog_insurance.jpg' )
+Image.create!(title:"Bork", image: 'https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Common-dog-behaviors-explained.jpg?itok=FSzwbBoi' )
 
 5.times do |n|
   Category.create!(name: "Category #{n}")
