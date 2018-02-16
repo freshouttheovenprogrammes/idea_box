@@ -36,6 +36,14 @@ body {
   height: 75px;
   padding: 0;
   font-family: $font-default;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.images-container {
+  position: absolute;
+  bottom: 0px;
 }
 
 .navbar-container li {
