@@ -1,5 +1,5 @@
 <div class="navbar-class">
-  <div class="navbar-container">
+  <nav class="navbar-container">
 
     <ul>
       <li><%= link_to "Home", root_path %></li>
@@ -9,7 +9,12 @@
     </ul>
 
 
-  </div>
-</div><% @categories.each do |category| %>
-<%= link_to "#{category.name}", category_path(category) %>
-<% end %>
+  </nav>
+</div>
+
+<section class="category-index">
+  <% @categories.each do |category| %>
+  <%= link_to "#{category.name}", category_path(category) %>
+  <% end %>
+
+</section>
