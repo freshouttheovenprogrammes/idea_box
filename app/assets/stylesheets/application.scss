@@ -262,3 +262,16 @@ body {
   padding-bottom: 15px;
   font-size: 25px;
 }
+
+.welcome-text {
+  display: flex;
+  position: relative;
+  bottom: -75px;
+  font-size: 35px;
+}
+
+.create-idea-button {
+  position: relative;
+  bottom: -60px;
+  right: -49px;
+}

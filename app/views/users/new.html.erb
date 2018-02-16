@@ -11,8 +11,15 @@
 
   </div>
 </div>
-<p>Welcome, <%= @user.full_name %> to IdeaBox!</p>
-<p>Here we will guide you through the process of creating an idea</p>
-<div class="create-idea-button">
-  <%= link_to "Create Idea", new_idea_path %>
-</div>
+
+<section class="welcome-text">
+
+  <p>Welcome, <%= @user.full_name %> to IdeaBox! </p>
+  <% byebug %>
+  <p>Here we will guide you through the process of creating an idea</p>
+</section>
+
+
+  <div class="create-idea-button">
+    <%= link_to "Create Idea", new_idea_path %>
+  </div>
