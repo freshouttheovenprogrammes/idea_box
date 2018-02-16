@@ -11,13 +11,17 @@
 
   </div>
 </div>
-<%= form_for @image do |f| %>
+<div class="admin-nav-container">
+  <div class="admin-nav-items">
+    <%= form_for @image do |f| %>
 
-<%= f.label :title %>
-<%= f.text_field :title %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
 
-<%= f.label :image %>
-<%= f.file_field :image %>
+    <%= f.label :image_url %>
+    <%= f.file_field :image %>
 
-<%= f.submit %>
-<% end %>
+    <%= f.submit %>
+    <% end %>
+  </div>
+</div>
