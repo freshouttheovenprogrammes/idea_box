@@ -252,10 +252,13 @@ body {
 .category-index {
   position: relative;
   bottom: -100px;
+  padding-left: 50px;
 }
 
 .category-index a {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding-bottom: 15px;
+  font-size: 25px;
 }
