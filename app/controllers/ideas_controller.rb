@@ -53,7 +53,7 @@ class IdeasController < ApplicationController
     @idea.images.destroy_all
     @idea.destroy
     @user = @idea.user
-    redirect_to user_ideas_path(@user)
+    redirect_to user_path(@user)
   end
 
   private
