@@ -19,7 +19,6 @@ describe "As a user" do
 
       expect(current_path).to eq user_path(user)
 
-      expect(page).to have_content("Welcome back #{user.full_name}!")
       expect(page).to have_content("Home")
 
       click_on "Home"
