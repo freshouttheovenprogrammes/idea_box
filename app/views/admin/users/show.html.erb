@@ -15,12 +15,12 @@
 <body>
 
 <div class="admin-nav-container">
-  <div class="admin-nav-items">
+  <nav class="admin-nav-items">
     <ul>
       <li><%= link_to "Add Categories", new_admin_category_path %></li>
       <li><%= link_to "Add Images", new_admin_image_path %></li>
     </ul>
-  </div>
+  </nav>
 </div>
 <div class="admin-welcome">
   Welcome back, <%= @user.full_name %>
