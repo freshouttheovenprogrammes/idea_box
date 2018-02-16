@@ -1,5 +1,24 @@
-<p>Welcome, <%= @user.full_name %> to IdeaBox!</p>
-<p>Here we will guide you through the process of creating an idea</p>
-<div class="create-idea-button">
-  <%= link_to "Create Idea", new_idea_path %>
+<div class="navbar-class">
+  <div class="navbar-container">
+
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "All Ideas", ideas_path %></li>
+      <li><%= link_to "All Categories", categories_path %></li>
+      <li><%= link_to "All Images", images_path %></li>
+    </ul>
+
+
+  </div>
 </div>
+
+<section class="welcome-text">
+
+  <p>Welcome, <%= @user.full_name %> to IdeaBox! </p>
+  <p>Here we will guide you through the process of creating an idea</p>
+</section>
+
+
+  <div class="create-idea-button">
+    <%= link_to "Create Idea", new_idea_path %>
+  </div>

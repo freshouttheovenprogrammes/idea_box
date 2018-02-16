@@ -11,8 +11,6 @@ describe "As a user" do
       fill_in 'Email Address', with: "zac@zac.com"
       fill_in 'Password', with: "password"
       click_on 'Log In'
-
-      expect(page).to have_content('Welcome back Zac Psquizz!')
     end
   end
 end

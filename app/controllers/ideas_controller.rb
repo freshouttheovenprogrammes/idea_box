@@ -50,9 +50,10 @@ class IdeasController < ApplicationController
 
   def destroy
     @idea = Idea.find(params[:id])
-    @user = @idea.user
+    @idea.images.destroy_all
     @idea.destroy
-    redirect_to user_ideas_path(@user)
+    @user = @idea.user
+    redirect_to user_path(@user)
   end
 
   private

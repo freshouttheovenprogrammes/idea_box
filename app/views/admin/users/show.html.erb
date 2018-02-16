@@ -1,14 +1,26 @@
 
+<div class="navbar-class">
+  <div class="admin-navbar-container">
 
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "All Ideas", ideas_path %></li>
+      <li><%= link_to "All Categories", categories_path %></li>
+      <li><%= link_to "All Images", images_path %></li>
+    </ul>
+
+
+  </div>
+</div>
 <body>
 
 <div class="admin-nav-container">
-  <div class="admin-nav-items">
+  <nav class="admin-nav-items">
     <ul>
       <li><%= link_to "Add Categories", new_admin_category_path %></li>
       <li><%= link_to "Add Images", new_admin_image_path %></li>
     </ul>
-  </div>
+  </nav>
 </div>
 <div class="admin-welcome">
   Welcome back, <%= @user.full_name %>
