@@ -203,3 +203,14 @@ body {
 .login-page {
   background-color: $beige
 }
+
+.new-idea-form {
+  position: relative;
+  bottom: -110px;
+}
+
+.user-ideas-container {
+  position: absolute;
+  bottom: 140px;
+  left: 60px;
+}
