@@ -31,8 +31,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'carrierwave','~> 1.0'
-gem 'mini_magick', '~> 4.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,6 +42,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails'
 end
+
+gem 'rails_12factor', group: :production
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

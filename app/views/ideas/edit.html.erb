@@ -1,1 +1,23 @@
-<%= render partial: "form" %>
+<div class="idea-navbar-container">
+  <%= link_to "Home", root_path %>
+  <%= link_to "My Profile", user_path(@user) %>
+  <%= link_to "My Ideas", user_ideas_path %>
+</div>
+<div class = 'new-idea-form'>
+  <%= form_for [@user, @idea] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= select(:idea, :category_id, options_for_select(@categories.collect do |c|
+                                                        [c.name, c.id] end)) %>
+
+  <div class="image_container">
+    <% @images.each do |image| %>
+      <%= check_box_tag "images[]", image.id, checked = false, id: "image_#{image.id}" %>
+      <%= image_tag image.image%>
+
+     <% end %>
+
+    <%= f.submit "Edit Idea"%>
+  <% end %>
+</div>

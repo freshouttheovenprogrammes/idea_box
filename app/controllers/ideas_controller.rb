@@ -6,11 +6,13 @@ class IdeasController < ApplicationController
     @idea = Idea.new
     @user = User.find(params[:user_id])
     @categories = Category.all
+    @images = Image.all
   end
 
   def create
     @user = User.find(params[:user_id])
     @idea = @user.ideas.new(idea_params)
+    set_image
     if @idea.save
       redirect_to user_idea_path(@user, @idea)
     else
@@ -31,6 +33,7 @@ class IdeasController < ApplicationController
     @idea = Idea.find(params[:id])
     @user = @idea.user
     @categories = Category.all
+    @images = @idea.images
   end
 
   def update
@@ -60,5 +63,9 @@ class IdeasController < ApplicationController
 
   def idea_current_user
     @user = current_user
+  end
+
+  def set_image
+    @idea.images << params[:images].map { |f| Image.find(f)}
   end
 end
