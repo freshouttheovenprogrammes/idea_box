@@ -1,7 +1,9 @@
 
 
 
+<div class="images-container">
+  <% @images.each do |image| %>
+  <%= image_tag image.image.to_s, size: "250x250" %>
+  <% end %>
 
-<% @images.each do |image| %>
-  <%= image_tag image.image.to_s %>
-<% end %>
+</div>
